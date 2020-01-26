@@ -10,7 +10,6 @@ module.exports = {
       },
     },
     'gatsby-transformer-json',
-    'gatsby-transformer-pdf',
     'gatsby-plugin-styled-components',
   ],
 };
