@@ -1,0 +1,11 @@
+logs
+*.log
+npm-debug.log*
+build/Release
+node_modules/
+.npm
+.eslintcache
+.cache
+.env
+public
+.DS_Store

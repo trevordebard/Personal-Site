@@ -1,0 +1,45 @@
+{
+  "name": "demo-gatsby-portfolio",
+  "private": true,
+  "description": "A simple portfolio site.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "dependencies": {
+    "gatsby": "^2.1.0",
+    "gatsby-image": "^2.0.30",
+    "gatsby-plugin-sharp": "^2.0.22",
+    "gatsby-plugin-styled-components": "^3.1.18",
+    "gatsby-source-filesystem": "^2.0.23",
+    "gatsby-transformer-json": "^2.1.8",
+    "gatsby-transformer-pdf": "^1.1.25",
+    "gatsby-transformer-sharp": "^2.1.14",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "styled-components": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.0",
+    "prettier": "^1.19.1"
+  }
+}

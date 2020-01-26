@@ -1,0 +1,48 @@
+[
+  {
+    "title": "Sign Me In",
+    "slug": "SignMeIn",
+    "url": "https://www.signmein.org",
+    "image": "./images/placeholder.png",
+    "description": "Attendance tracking web application that allows member of organizations to mark themselves present and displays the results live.",
+    "tools": [
+      "Next.js",
+      "React",
+      "Socket.io",
+      "PostgreSQL",
+      "Heroku",
+      "JavaScript (ES6)"
+    ]
+  },
+  {
+    "title": "Focus Up",
+    "slug": "FocusUp",
+    "url": "https://focusup.app",
+    "image": "./images/placeholder.png",
+    "description": "Desktop application for Mac and Windows that allows users to block distracting websites across their entire computer for a user-specified length of time.",
+    "tools": ["Electon", "React", "JavaScript (ES6)"]
+  },
+  {
+    "title": "Reddit Sentiment Analysis",
+    "slug": "RedditAnalysis",
+    "image": "./images/placeholder.png",
+    "url": "https://github.com/trevordebard/old-files-from-school/tree/master/Data%20Science%20Part%202/Reddit%20Sentiment%20Analysis",
+    "description": "Application which receives all comments posted to a variety of subreddits in real-time, performs sentiment analysis, and determines the subreddit's average sentiment for each presidential candidate.",
+    "tools": [
+      "Python",
+      "Flask",
+      "React",
+      "HBase",
+      "Apache Kafka",
+      "Apache Spark"
+    ]
+  },
+  {
+    "title": "Where In Our City",
+    "slug": "wioc",
+    "image": "./images/placeholder.png",
+    "url": "https://github.com/trevordebard/WhereInOurCity",
+    "description": "Web application that allows users to connect with locals in a city to learn about events and receive personal recommendations. Built on team of 4 for Software Engineering II course.",
+    "tools": ["PHP", "HTML5", "CSS3", "MySQL"]
+  }
+]
