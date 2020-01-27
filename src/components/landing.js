@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const LandingContainer = styled.div`
-  height: 100vh;
+  height: calc(100vh - 10px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,6 @@ const Header = styled.div`
   p {
     margin-top: 1.3rem;
     line-height: 2.2rem;
-    color: hsl(234, 50%, 70%);
   }
 `;
 const Links = styled.div`
@@ -38,6 +37,7 @@ const Links = styled.div`
     border-bottom: 1px solid hsl(14, 89%, 55%);
     margin: 0px 5px;
     text-decoration: none;
+    color: hsl(234, 50%, 79%);
   }
 `;
 export default () => {
@@ -48,7 +48,6 @@ export default () => {
       }
     }
   `);
-  console.log(data);
   return (
     <LandingContainer>
       <Header>
@@ -63,7 +62,11 @@ export default () => {
         <Links>
           <ul>
             <li>
-              <a href={data.file.publicURL} download>
+              <a
+                href={data.file.publicURL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Resume{' '}
               </a>
             </li>

@@ -17,6 +17,7 @@ html {
 }
 p {
   font-weight: 100;
+  color: hsl(234, 50%, 79%);
 }
 body {
   font-size: 2.2rem;

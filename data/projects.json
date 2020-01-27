@@ -20,7 +20,7 @@
     "url": "https://focusup.app",
     "image": "./images/placeholder.png",
     "description": "Desktop application for Mac and Windows that allows users to block distracting websites across their entire computer for a user-specified length of time.",
-    "tools": ["Electon", "React", "JavaScript (ES6)"]
+    "tools": ["Electron", "React", "JavaScript (ES6)"]
   },
   {
     "title": "Reddit Sentiment Analysis",
