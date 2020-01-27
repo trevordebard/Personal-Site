@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { graphql, useStaticQuery } from 'gatsby';
+
 const LandingContainer = styled.div`
   height: 100vh;
   display: flex;
@@ -38,35 +40,44 @@ const Links = styled.div`
     text-decoration: none;
   }
 `;
-
-export default () => (
-  <LandingContainer>
-    <Header>
-      <h1>
-        Hi, I'm <span>Trevor DeBardeleben</span>
-      </h1>
-      <p>
-        I graduated from Louisiana State University with a degree in Computer
-        Science in May 2019. When I'm not watching LSU Football, I enjoy
-        leveling up my skills as a software developer.
-      </p>
-      <Links>
-        <ul>
-          <li>
-            <a href="Resume-Trevor-DeBardeleben.pdf" download>
-              Resume{' '}
-            </a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="mailto: trevordebard@gmail.com">Email</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="https://github.com/trevordebard">Github</a>
-          </li>
-        </ul>
-      </Links>
-    </Header>
-  </LandingContainer>
-);
+export default () => {
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "Resume-Trevor-DeBardeleben.pdf" }) {
+        publicURL
+      }
+    }
+  `);
+  console.log(data);
+  return (
+    <LandingContainer>
+      <Header>
+        <h1>
+          Hi, I'm <span>Trevor DeBardeleben</span>
+        </h1>
+        <p>
+          I graduated from Louisiana State University with a degree in Computer
+          Science in May 2019. When I'm not watching LSU Football, I enjoy
+          leveling up my skills as a software developer.
+        </p>
+        <Links>
+          <ul>
+            <li>
+              <a href={data.file.publicURL} download>
+                Resume{' '}
+              </a>
+            </li>
+            <li>|</li>
+            <li>
+              <a href="mailto: trevordebard@gmail.com">Email</a>
+            </li>
+            <li>|</li>
+            <li>
+              <a href="https://github.com/trevordebard">Github</a>
+            </li>
+          </ul>
+        </Links>
+      </Header>
+    </LandingContainer>
+  );
+};
