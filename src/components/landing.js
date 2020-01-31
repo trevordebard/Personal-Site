@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useSpring, animated, useTrail } from 'react-spring';
+import { useSpring, animated } from 'react-spring';
 
 import { graphql, useStaticQuery } from 'gatsby';
 
@@ -18,7 +18,7 @@ const Header = styled(animated.div)`
     min-width: 80%;
   }
   h1 {
-    font-size: 3.9rem;
+    font-size: 4.3rem;
   }
   p {
     margin-top: 1.3rem;
@@ -38,7 +38,8 @@ const Links = styled(animated.div)`
     border-bottom: 1px solid hsl(14, 89%, 55%);
     margin: 0px 5px;
     text-decoration: none;
-    color: hsl(234, 50%, 89%);
+    color: hsl(215, 100%, 95%);
+    font-weight: 100;
   }
 `;
 export default () => {
@@ -50,19 +51,15 @@ export default () => {
     }
   `);
   const props = useSpring({ opacity: 1, from: { opacity: 0 } });
-  const titleAnimation = useSpring({
-    marginLeft: 0,
-    from: { marginLeft: -500 },
-  });
   const linksAnimation = useSpring({
-    marginTop: 5,
+    marginTop: 13,
     from: { marginTop: 300 },
     delay: 100,
   });
   return (
     <LandingContainer>
       <Header style={props}>
-        <animated.h1 style={titleAnimation}>
+        <animated.h1>
           Hi, I'm <span>Trevor DeBardeleben</span>
         </animated.h1>
         <p>

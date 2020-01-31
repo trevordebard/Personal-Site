@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const LayoutContainer = styled.div`
   max-width: 90%;
-  width: 57ch;
+  width: 80%;
   margin: 5rem auto;
   h1 {
     margin-bottom: 2rem;
