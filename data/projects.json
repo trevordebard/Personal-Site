@@ -4,7 +4,7 @@
     "slug": "SignMeIn",
     "url": "https://www.signmein.org",
     "image": "./images/placeholder.png",
-    "description": "Attendance tracking web application that allows member of organizations to mark themselves present and displays the results live.",
+    "description": "Attendance tracking web application that allows members of organizations to mark themselves present and displays the results live.",
     "tools": [
       "Next.js",
       "React",
@@ -42,7 +42,7 @@
     "slug": "wioc",
     "image": "./images/placeholder.png",
     "url": "https://github.com/trevordebard/WhereInOurCity",
-    "description": "Web application that allows users to connect with locals in a city to learn about events and receive personal recommendations. Built on team of 4 for Software Engineering II course.",
+    "description": "Web application that allows users to connect with locals in a city to learn about events and receive personal recommendations for a variety of categories such as shopping, dining, and volunteering.",
     "tools": ["PHP", "HTML5", "CSS3", "MySQL"]
   }
 ]

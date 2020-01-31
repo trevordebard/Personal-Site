@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
 
-const ProjectPreviewContainer = styled.div`
+const PreviewContainer = styled.div`
   margin-bottom: 2rem;
   width: 100%;
   background-color: hsl(220, 67%, 17%);
@@ -58,8 +58,8 @@ function renderTags(tools) {
     </Tag>
   ));
 }
-const ProjectPreview = ({ title, description, slug, tools, url }) => (
-  <ProjectPreviewContainer>
+const Preview = ({ title, description, slug, tools, url }) => (
+  <PreviewContainer>
     <h3>
       <a href={url} target="_blank" rel="noopener noreferrer">
         {title}
@@ -67,7 +67,7 @@ const ProjectPreview = ({ title, description, slug, tools, url }) => (
     </h3>
     <p>{description}</p>
     <TagContainer>{tools && renderTags(tools)}</TagContainer>
-  </ProjectPreviewContainer>
+  </PreviewContainer>
 );
 
-export default ProjectPreview;
+export default Preview;

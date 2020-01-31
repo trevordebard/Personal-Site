@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Section from '../components/section';
-import ProjectPreview from '../components/project-preview';
+import Preview from '../components/preview-card';
 import Landing from '../components/landing';
 
 import '../components/layout.css';
@@ -27,10 +27,23 @@ const Home = () => {
           }
         }
       }
+      allExperienceJson {
+        nodes {
+          title
+        }
+        edges {
+          node {
+            title
+            tools
+            description
+          }
+        }
+      }
     }
   `);
   const projects = data.allProjectsJson.edges;
-
+  const experiences = data.allExperienceJson.edges;
+  console.log(data);
   return (
     <>
       <Landing />
@@ -44,11 +57,29 @@ const Home = () => {
           const imageData = project.image.childImageSharp.fluid;
 
           return (
-            <ProjectPreview
+            <Preview
               title={title}
               description={description}
               slug={slug}
               imageData={imageData}
+              tools={tools}
+              url={url}
+            />
+          );
+        })}
+      </Section>
+      <Section title="Work Experience">
+        {experiences.map(({ node: project }) => {
+          const { title } = project;
+          const { description } = project;
+          const { slug } = project;
+          const { tools } = project;
+          const { url } = project;
+          return (
+            <Preview
+              title={title}
+              description={description}
+              slug={slug}
               tools={tools}
               url={url}
             />

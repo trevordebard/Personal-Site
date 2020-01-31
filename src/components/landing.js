@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSpring, animated, useTrail } from 'react-spring';
 
 import { graphql, useStaticQuery } from 'gatsby';
 
@@ -10,7 +11,7 @@ const LandingContainer = styled.div`
   align-items: center;
   font-size: 1.6rem;
 `;
-const Header = styled.div`
+const Header = styled(animated.div)`
   text-align: center;
   width: 60%;
   @media (max-width: 900px) {
@@ -24,7 +25,7 @@ const Header = styled.div`
     line-height: 2.2rem;
   }
 `;
-const Links = styled.div`
+const Links = styled(animated.div)`
   margin-top: 1.3rem;
   ul {
     padding-inline-start: 0;
@@ -37,7 +38,7 @@ const Links = styled.div`
     border-bottom: 1px solid hsl(14, 89%, 55%);
     margin: 0px 5px;
     text-decoration: none;
-    color: hsl(234, 50%, 79%);
+    color: hsl(234, 50%, 89%);
   }
 `;
 export default () => {
@@ -48,18 +49,28 @@ export default () => {
       }
     }
   `);
+  const props = useSpring({ opacity: 1, from: { opacity: 0 } });
+  const titleAnimation = useSpring({
+    marginLeft: 0,
+    from: { marginLeft: -500 },
+  });
+  const linksAnimation = useSpring({
+    marginTop: 5,
+    from: { marginTop: 300 },
+    delay: 100,
+  });
   return (
     <LandingContainer>
-      <Header>
-        <h1>
+      <Header style={props}>
+        <animated.h1 style={titleAnimation}>
           Hi, I'm <span>Trevor DeBardeleben</span>
-        </h1>
+        </animated.h1>
         <p>
           I graduated from Louisiana State University with a degree in Computer
           Science in May 2019. When I'm not watching LSU Football, I enjoy
           leveling up my skills as a software developer.
         </p>
-        <Links>
+        <Links style={linksAnimation}>
           <ul>
             <li>
               <a

@@ -1,0 +1,24 @@
+[
+  {
+    "company": "FAST Enterprises",
+    "title": "Implementation Consultant",
+    "dates": "July 2018 – Present",
+    "description": "The role of Implementation Consultant requires strong skills as a developer and communicator. I work daily with clients to gather software requirements, discuss business needs, and address concerns. I use this feedback to build solutions in the form of new features and enhancements that meet their needs. Software changes made ensure residents of Arkansas can process their license, registration, and payments efficiently.",
+    "tools": ["VB.Net", "SQL"]
+  },
+
+  {
+    "company": "CGI Federal",
+    "title": "Software Engineering Intern",
+    "dates": "June 2018 – Aug. 2018",
+    "description": "My primary role at CGI was to develop a dashboard to display real-time data from a REST API to display the overall health of various systems. I also set up the Windows Server test environment for this  dashboard before moving to production, and I worked with Python to prevent downtime for another internal tool.",
+    "tools": ["React", "Python", "JavaScript", "REST API"]
+  },
+  {
+    "company": "International Paper",
+    "title": "IT Intern",
+    "dates": "May 2017–Aug. 2017",
+    "description": "As an intern, I developed the minimum viable product of an internal web application designed to improve and enhance operational speed by presenting data from multiple sources in one location.",
+    "tools": ["JavaScript", "SQL", "HTML", "CSS", "webMethods"]
+  }
+]
