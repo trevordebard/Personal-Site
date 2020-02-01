@@ -11,7 +11,7 @@
     "company": "CGI Federal",
     "title": "Software Engineering Intern",
     "dates": "June 2018 – Aug. 2018",
-    "description": "My primary role at CGI was to develop a dashboard to display real-time data from a REST API to display the overall health of various systems. I also set up the Windows Server test environment for this  dashboard before moving to production, and I worked with Python to prevent downtime for another internal tool.",
+    "description": "My primary role as an intern was to develop a dashboard to display real-time data from a REST API to display the overall health of various systems. I also set up the Windows Server test environment for this  dashboard before moving to production, and I worked with Python to prevent downtime for another internal tool.",
     "tools": ["React", "Python", "JavaScript", "REST API"]
   },
   {
