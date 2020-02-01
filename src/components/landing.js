@@ -88,8 +88,8 @@ export default () => {
         </animated.h1>
         <p>
           I graduated from Louisiana State University with a degree in Computer
-          Science in May 2019. When I'm not watching LSU Football, I enjoy
-          leveling up my skills as a software developer.
+          Science in May 2019. I am a strong developer, communicator, and
+          learner looking for opportunities in the Atlanta area.
         </p>
         <Links style={linksAnimation}>
           <ul>
