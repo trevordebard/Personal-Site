@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import Image from 'gatsby-image';
 import styled from 'styled-components';
+import { useInView } from 'react-intersection-observer';
+import { animated, useSpring } from 'react-spring';
+import 'intersection-observer'; // polyfill
 
-const PreviewContainer = styled.div`
+const PreviewContainer = styled(animated.div)`
   margin-bottom: 2rem;
   width: 100%;
   background-color: hsl(220, 67%, 17%);
@@ -58,16 +59,26 @@ function renderTags(tools) {
     </Tag>
   ));
 }
-const Preview = ({ title, description, slug, tools, url }) => (
-  <PreviewContainer>
-    <h3>
-      <a href={url} target="_blank" rel="noopener noreferrer">
-        {title}
-      </a>
-    </h3>
-    <p>{description}</p>
-    <TagContainer>{tools && renderTags(tools)}</TagContainer>
-  </PreviewContainer>
-);
+const Preview = ({ title, description, tools, url }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
+  const entrance = useSpring({
+    marginTop: inView ? 0 : 100,
+  });
+
+  return (
+    <PreviewContainer style={entrance} ref={ref}>
+      <h3>
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          {title}
+        </a>
+      </h3>
+      <p>{description}</p>
+      <TagContainer>{tools && renderTags(tools)}</TagContainer>
+    </PreviewContainer>
+  );
+};
 
 export default Preview;

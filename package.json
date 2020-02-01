@@ -19,8 +19,10 @@
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-json": "^2.1.8",
     "gatsby-transformer-sharp": "^2.1.14",
+    "intersection-observer": "^0.7.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
+    "react-intersection-observer": "^8.25.2",
     "react-spring": "^8.0.27",
     "styled-components": "^5.0.0"
   },

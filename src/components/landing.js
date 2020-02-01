@@ -23,6 +23,7 @@ const Header = styled(animated.div)`
   p {
     margin-top: 1.3rem;
     line-height: 2.2rem;
+    font-style: italic;
   }
 `;
 const Links = styled(animated.div)`
@@ -39,7 +40,7 @@ const Links = styled(animated.div)`
     margin: 0px 5px;
     text-decoration: none;
     color: hsl(215, 100%, 95%);
-    font-weight: 100;
+    font-weight: 300;
   }
 `;
 export default () => {

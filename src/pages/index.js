@@ -43,7 +43,6 @@ const Home = () => {
   `);
   const projects = data.allProjectsJson.edges;
   const experiences = data.allExperienceJson.edges;
-  console.log(data);
   return (
     <>
       <Landing />
@@ -68,7 +67,7 @@ const Home = () => {
           );
         })}
       </Section>
-      <Section title="Work Experience">
+      <Section title="Experience">
         {experiences.map(({ node: project }) => {
           const { title } = project;
           const { description } = project;
