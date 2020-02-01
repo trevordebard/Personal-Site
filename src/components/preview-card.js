@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useInView } from 'react-intersection-observer';
 import { animated, useSpring } from 'react-spring';
 import 'intersection-observer'; // polyfill
+import Img from 'gatsby-image';
 
 const PreviewContainer = styled(animated.div)`
   margin-bottom: 2rem;
@@ -59,7 +60,7 @@ function renderTags(tools) {
     </Tag>
   ));
 }
-const Preview = ({ title, description, tools, url }) => {
+const Preview = ({ title, description, tools, url, company }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
@@ -75,6 +76,7 @@ const Preview = ({ title, description, tools, url }) => {
           {title}
         </a>
       </h3>
+      {company && <h5>{company}</h5>}
       <p>{description}</p>
       <TagContainer>{tools && renderTags(tools)}</TagContainer>
     </PreviewContainer>

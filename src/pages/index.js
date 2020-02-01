@@ -18,13 +18,6 @@ const Home = () => {
             description
             tools
             url
-            image {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
           }
         }
       }
@@ -37,6 +30,7 @@ const Home = () => {
             title
             tools
             description
+            company
           }
         }
       }
@@ -58,14 +52,11 @@ const Home = () => {
           const { slug } = project;
           const { tools } = project;
           const { url } = project;
-          const imageData = project.image.childImageSharp.fluid;
-
           return (
             <Preview
               title={title}
               description={description}
               slug={slug}
-              imageData={imageData}
               tools={tools}
               url={url}
             />
@@ -79,6 +70,7 @@ const Home = () => {
           const { slug } = project;
           const { tools } = project;
           const { url } = project;
+          const { company } = project;
           return (
             <Preview
               title={title}
@@ -86,6 +78,7 @@ const Home = () => {
               slug={slug}
               tools={tools}
               url={url}
+              company={company}
             />
           );
         })}
