@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import Section from '../components/section';
 import Preview from '../components/preview-card';
 import Landing from '../components/landing';
@@ -45,6 +46,10 @@ const Home = () => {
   const experiences = data.allExperienceJson.edges;
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Trevor DeBardeleben</title>
+      </Helmet>
       <Landing />
       <Section title="Projects">
         {projects.map(({ node: project }) => {
