@@ -12,5 +12,11 @@ module.exports = {
     'gatsby-transformer-json',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.trackingId,
+      },
+    },
   ],
 };
